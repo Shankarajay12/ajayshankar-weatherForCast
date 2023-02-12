@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherForCast</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div>
+        <div class="header">
+            <h2>WeatherForCast <small id="owner">by &#169; AjayShankar</small></h2>
+            <span>Search For Location :<input id="input" type="text"></span>
+            <button id="findWeather"> find</button>
+        </div>
+        <div class="weather">
+            <ul class="heading-list">
+                <li class="inline-list"><img id="weather-logo" src="/img/Weather.svg" alt="WeatherReporst Today"></li>
+                <li class="inline-list">
+                    <div>day type :
+                        <span id="dayType"></span>
+                    </div>
+                </li>
+                <li>
+                    <img id="report-logo" src="">
+                </li>
+            </ul>
+        </div>
+
+        <!-- ======================   H   E    A   D   E   R  ===================================== -->
+        <!-- ======================   B   O     D   Y     ======================================== -->
+        <div class="weather-section">
+            <div class="row1">
+                <div id="section1">Temprature in Degree :<br />
+                    <span class="data" id="temp"></span>
+                </div>
+                <div id="section2">Humidity :<br />
+                    <span class="data" id="humidity"></span>
+                </div>
+                <div id="section3">Wind Speed in mph :<br />
+                    <span class="data" id="widnSpeed"></span>
+                </div>
+            </div>
+
+            <div class="row2">
+                <div id="section4">UV :<br />
+                    <span class="data" id="UV"></span>
+                </div>
+                <div id="section5">Air Pressure :<br />
+                    <span class="data" id="airPress"></span>
+                </div>
+                <div id="section6">Visibility :<br />
+                    <span class="data" id="Visible"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js" type="text/javascript"></script>
+
+</html>

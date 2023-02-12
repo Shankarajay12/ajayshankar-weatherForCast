@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Overpass+Mono&display=swap');
+
+
+:root{
+    --primary-color:#4ade80;
+    --secondary-color:#525252;
+}
+
+body{
+    background-color: #404040;
+    color: white;
+    font-family: 'Overpass Mono', monospace;
+}
+
+#owner{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-small;
+}
+
+.data{
+    font-size: 2rem;
+}
+.header{
+    text-align: center;
+}
+
+#findWeather{
+    font-family: 'Overpass Mono', monospace;
+    width: 10%;
+    font-size: 0rem 0.5rem;
+    background-color: var(--primary-color);
+}
+
+.weather{
+    text-align: center;
+    padding: 1rem;
+}
+.heading-list{
+    list-style: none;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+#weather-logo{
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    max-width: 300px;
+    height: 150px;
+}
+
+.row1 ,.row2{
+    display: flex;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1rem 1rem;
+    background-color: var(--secondary-color);
+}
+.weather-section{
+    
+    padding: 1rem;
+    text-align: center;
+}
+
+.row1 #section1,#section2,#section3{
+
+    float: left;
+    width: 28%;
+    padding: 10px;
+    height: 150px;
+    
+    text-align: center;
+   
+}
+
+.row2 #section4,#section5,#section6{
+    float: left;
+    width: 28%;
+    padding: 10px;
+    height: 300px;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
