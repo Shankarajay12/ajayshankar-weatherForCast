@@ -50,7 +50,7 @@ function getWeatherIcon(currWeatherImg)
   let divLocation = document.getElementById("report-logo");
   let imgElement = document.createElement("img");
   currWeatherImg=currWeatherImg.replace(/"|'/g, '');
-  console.log(currWeatherImg);
+ 
   imgElement.src = "https:"+currWeatherImg;
   divLocation.append(imgElement);
 }

@@ -25,10 +25,6 @@ body{
     text-align: center;
 }
 
-.dayType{
-    color:#000000
-}
-
 #findWeather{
     font-family: 'Overpass Mono', monospace;
     width: 10%;
@@ -78,7 +74,7 @@ body{
     width: 28%;
     padding: 10px;
     height: 150px;
-    color: #404040;
+    color: var(--primary-color)
     text-align: center;
    
 }
@@ -88,11 +84,18 @@ body{
     width: 28%;
     padding: 10px;
     height: 300px;
-    color: #404040;
+    color: var(--primary-color)
     text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
+        body{
+            background-color: #404040;
+            color: white;
+            font-family: 'Overpass Mono', monospace;
+        }
+
+    
     #weather-logo{
         margin: auto;
         padding: 1rem;
@@ -108,6 +111,7 @@ body{
         height: 80px;
         font-size: 12px;
         text-align: center;
+        
        
     }
     .row2 #section4,#section5,#section6{
@@ -118,6 +122,7 @@ body{
         font-size: 12px;
         text-align: center;
         margin:0rem 0.5rem;
+        
     }
 
     .row1 ,.row2{
@@ -128,12 +133,13 @@ body{
     }
     .data{
         font-size: 1rem;
-        color: #000000;
+        
     }
     .weather-section{
         backdrop-filter: blur(20px);
         padding: 1rem;
         text-align: center;
+        
     }
   }
 
