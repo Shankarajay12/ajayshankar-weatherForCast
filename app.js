@@ -24,16 +24,35 @@ function getBackgroudImage()
   
   var text1=howIsDay.replace(/[^a-zA-Z0-9 ]/g, '');
 
-
-  if(text1==="Sunny")
+  console.log(text1);
+  if(text1.startsWith("S"))
   {
-    body.style.backgroundColor="#eab308";
-
+    body.style.backgroundImage= "url(img/Sunny.jpg)";
   }
-  else if(text1==="Clear")
+  if(text1.startsWith("C"))
   {
-    body.style.backgroundColor="#0f172a";
+    body.style.backgroundImage= "url(img/clear.jpg)";
   }
+  if(text1.startsWith("P"))
+  {
+    body.style.backgroundImage= "url(img/partlyCloudy.jpg)";
+  }
+  if(text1.startsWith("M"))
+  {
+
+    body.style.backgroundImage= "url(img/mist.jpg)";
+  }
+
+}
+
+function getWeatherIcon(currWeatherImg)
+{
+  let divLocation = document.getElementById("report-logo");
+  let imgElement = document.createElement("img");
+  currWeatherImg=currWeatherImg.replace(/"|'/g, '');
+  console.log(currWeatherImg);
+  imgElement.src = "https:"+currWeatherImg;
+  divLocation.append(imgElement);
 }
 
 //document.getElementById("report-logo").attr('src', currWeatherImg);
@@ -62,11 +81,11 @@ function getUVvalue(index)
   }
 }
 
-const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=';
+const Apiurl = 'https://weatherapi-com.p.rapidapi.com/current.json?q=';
 
 function Geturl(location)
 {
-    return url+location;
+    return Apiurl+location;
 }
 
 const options = {
@@ -89,9 +108,13 @@ function getWeather()
     fetch(Geturl(location), options)
   .then(res => res.json())
   .then(json => {
-    //var output=json.current.temp_c; 
-    currWeatherImg=JSON.stringify(json.current.condition.icon);
 
+    //getting the current weather icon here
+    currWeatherImg=JSON.stringify(json.current.condition.icon);
+    console.log(currWeatherImg);
+    getWeatherIcon(currWeatherImg);
+
+    //setting the backgroud image here
     howIsDay=JSON.stringify(json.current.condition.text);
     console.log(howIsDay);
     getBackgroudImage();
