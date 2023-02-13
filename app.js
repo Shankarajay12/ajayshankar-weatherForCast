@@ -8,8 +8,33 @@ var windSpeed=document.getElementById("widnSpeed");
 var UV=document.getElementById("UV");
 var airPress=document.getElementById("airPress");
 var Visible=document.getElementById("Visible");
+var body=document.getElementById("body");
+
+var weatherLogo=document.getElementById("report-logo");
 
 var currWeatherImg="";
+var howIsDay="";
+
+
+
+weatherLogo.style.imageRendering
+
+function getBackgroudImage()
+{
+  
+  var text1=howIsDay.replace(/[^a-zA-Z0-9 ]/g, '');
+
+
+  if(text1==="Sunny")
+  {
+    body.style.backgroundColor="#eab308";
+
+  }
+  else if(text1==="Clear")
+  {
+    body.style.backgroundColor="#0f172a";
+  }
+}
 
 //document.getElementById("report-logo").attr('src', currWeatherImg);
 
@@ -67,6 +92,11 @@ function getWeather()
     //var output=json.current.temp_c; 
     currWeatherImg=JSON.stringify(json.current.condition.icon);
 
+    howIsDay=JSON.stringify(json.current.condition.text);
+    console.log(howIsDay);
+    getBackgroudImage();
+    
+
     dayType.innerHTML=JSON.stringify(json.current.condition.text);
     temp.innerHTML=JSON.stringify(json.current.temp_c)+"&#176;C";
     humidity.innerHTML=JSON.stringify(json.current.humidity)+"%";
@@ -77,14 +107,11 @@ function getWeather()
 
     airPress.innerHTML=JSON.stringify(json.current.pressure_mb)+"hPa";
     Visible.innerHTML=JSON.stringify(json.current.vis_km)+"km";
+    
 
   })
   .catch(errorOcc);
 
 }
-
-
-
-
 
 findWeather.addEventListener("click",getWeather);

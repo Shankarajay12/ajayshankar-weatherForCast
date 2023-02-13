@@ -4,6 +4,7 @@
 :root{
     --primary-color:#4ade80;
     --secondary-color:#525252;
+    --weather-detail-color:#525252;
 }
 
 body{
@@ -57,7 +58,7 @@ body{
     box-sizing: border-box;
     margin: auto;
     padding: 1rem 1rem;
-    background-color: var(--secondary-color);
+    background-color: var(--weather-detail-color);
 }
 .weather-section{
     
@@ -111,12 +112,13 @@ body{
         font-size: 12px;
         background-color: var(--secondary-color);
         text-align: center;
+        margin:0rem 0.5rem;
     }
 
     .row1 ,.row2{
        
         box-sizing: border-box;
-        margin: 0rem;
+        margin: 0.5rem 0.5rem;
         padding: 0.5rem 0.5rem;
         background-color: var(--secondary-color);
     }
