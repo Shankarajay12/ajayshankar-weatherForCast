@@ -27,7 +27,7 @@ body{
 #findWeather{
     font-family: 'Overpass Mono', monospace;
     width: 10%;
-    font-size: 0rem 0.5rem;
+    font-size: 12px;
     background-color: var(--primary-color);
 }
 
@@ -84,6 +84,46 @@ body{
     background-color: var(--secondary-color);
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    #weather-logo{
+        margin: auto;
+        padding: 1rem;
+        text-align: center;
+        max-width: 180px;
+        height: 150px;
+    }
+    .row1 #section1,#section2,#section3{
+
+        float: left;
+        width: 20%;
+        padding: 1rem;
+        height: 80px;
+        font-size: 12px;
+        text-align: center;
+       
+    }
+    .row2 #section4,#section5,#section6{
+        float: left;
+        width: 20%;
+        padding: 1rem;
+        height: 80px;
+        font-size: 12px;
+        background-color: var(--secondary-color);
+        text-align: center;
+    }
+
+    .row1 ,.row2{
+       
+        box-sizing: border-box;
+        margin: 0rem;
+        padding: 0.5rem 0.5rem;
+        background-color: var(--secondary-color);
+    }
+    .data{
+        font-size: 1rem;
+    }
+  }
 
 
 
