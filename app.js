@@ -48,11 +48,11 @@ function getBackgroudImage()
 function getWeatherIcon(currWeatherImg)
 {
   let divLocation = document.getElementById("report-logo");
-  let imgElement = document.createElement("img");
+  
   currWeatherImg=currWeatherImg.replace(/"|'/g, '');
  
-  imgElement.src = "https:"+currWeatherImg;
-  divLocation.append(imgElement);
+  divLocation.src = "https:"+currWeatherImg;
+
 }
 
 //document.getElementById("report-logo").attr('src', currWeatherImg);
